@@ -28,5 +28,7 @@ alias watch-css='sass --watch public/stylesheets/_sass:public/stylesheets --styl
 alias spec='/opt/local/bin/spec --options ~/spec.opts'
 alias cuke='cucumber --format pretty'
 
+alias disk='du -h --max-depth=1'
+
 # Mac Dock spacer command
 # defaults write com.apple.dock persistent-apps -array-add '{"tile-type"="spacer-tile";}'; killall Dock'

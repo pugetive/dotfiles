@@ -3,7 +3,17 @@ export EDITOR
 
 unset USERNAME
 
-PS1="\[\e[32;1m\]\u@\[\e[34;1m\]\h\[\e[36;1m\] \W/ > \[\e[0m\]"
+# PS1="\[\e[32;1m\]\u@\[\e[34;1m\]\h\[\e[36;1m\] \W/ > \[\e[0m\]"
+# $(git branch 2>/dev/null | grep '^*' | colrm 1 2)
+# git info: "...\`git branch 2> /dev/null | grep -e ^* | sed -E  s/^\\\\\\\\\*\ \(.+\)$/\(\\\\\\\\\1\)\ /\`
+
+__parse_git_branch() {
+  git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/'
+}
+
+PS1="\n\[\e[0;36m\]┌─[\[\e[0m\]\[\e[1;32m\]\u\[\e[0m\]\[\e[1;36m\]@\[\e[0m\]\[\e[1;34m\]\h\[\e[0m\]\[\e[0;36m\]]─[\[\e[0m\]\[\e[1;37m\]\w\[\e[0m\]\[\e[0;36m\]]\[\e[0;36m\]─[\[\e[0m\]\[\e[0;33m\]\$(__parse_git_branch)\[\e[0m\]\[\e[0;36m\]]\[\e[0m\]\n\[\e[0;36m\]└─[\[\e[0m\]\[\e[1;37m\]\$\[\e[0m\]\[\e[0;36m\]]› \[\e[0m\]"
+# PS1="\[33[01;32m\]\u@\h\[33[01;34m\] \w \[33[00m\]\$(git branch 2>/dev/null | grep '^*' | colrm 1 2)\[33[01;34m\] \$\[33[00m\] "
+
 export PS1
 
 # a  black
