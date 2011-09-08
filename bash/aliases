@@ -1,6 +1,15 @@
+# Shortcuts
+alias rgrep='find . -type f|xargs grep';
+alias rf='find . -name';
+alias la='ls -alh';
+alias tf='tail -f';
+alias watch-css='sass --watch public/stylesheets/_sass:public/stylesheets --style=compressed'
+alias spec='/opt/local/bin/spec --options ~/spec.opts'
+alias cuke='cucumber --format pretty'
+alias disk='du -h --max-depth=1'
 alias cs='cd ~/Sites';
-
 alias t='rake spec';
+alias c='clear';
 
 # Git
 alias gb='git branch'
@@ -19,16 +28,6 @@ alias web-free='lsof -i tcp:3000 -Fp|tr -d p|xargs kill -9'
 alias emacs="echo 'type that again, mate'";
 alias rgrpe='rgrep'
 
-# Shortcuts
-alias rgrep='find . -type f|xargs grep';
-alias rf='find . -name';
-alias la='ls -alh';
-alias tf='tail -f';
-alias watch-css='sass --watch public/stylesheets/_sass:public/stylesheets --style=compressed'
-alias spec='/opt/local/bin/spec --options ~/spec.opts'
-alias cuke='cucumber --format pretty'
-
-alias disk='du -h --max-depth=1'
 
 # Mac Dock spacer command
 # defaults write com.apple.dock persistent-apps -array-add '{"tile-type"="spacer-tile";}'; killall Dock'
