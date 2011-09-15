@@ -17,10 +17,52 @@ function rvm_version {
   local version=$(echo $MY_RUBY_HOME | awk -F'-' '{print $2}')
   [ "$version" != "" ] && version="@$version"
   local full="$version$gemset"
-  [ "$full" != "" ] && echo "$full "
+  [ "$full" != "" ] && echo "$full"
 }
 
-PS1="\[\e[1;33m\]\u@\[\e[0m\]\[\e[1;32m\]\[\e[0m\]\[\e[1;32m\]\h\[\e[0m\]:\[\e[0;36m\]\w\[\e[0m\] \[\e[0;35m\]\$(__parse_git_branch) \[\e[0;34m\]\$(rvm_version)\[\e[0m\]\[\e[1;37m\] \$\[\e[0m\] "
+
+# Black 0;30  Dark Gray 1;30
+# Blue 0;34   Light Blue 1;34
+# Green 0;32  Light Green 1;32
+# Cyan 0;36   Light Cyan 1;36
+# Red 0;31  Light Red 1;31
+# Purple 0;35   Light Purple 1;35
+# Brown 0;33  Yellow 1;33
+# Light Gray 0;37   White 1;37
+
+STR_MAX_LENGTH=0
+
+USER_COLOR='\[\e[0;33m\]'
+HOST_COLOR='\[\e[0;32m\]'
+RESET_COLOR='\[\e[0m\]'
+WORKING_DIR_COLOR='\[\e[1;36m\]'
+ABBR_DIR_COLOR='\[\e[0;36m\]'
+DIR_SEP_COLOR=$ABBR_DIR_COLOR
+GIT_BRANCH_COLOR='\[\e[0;35m\]'
+RVM_GEMSET_COLOR='\[\e[0;34m\]'
+PROMPT_COLOR='\[\e[0;37m\]'
+
+NEW_PWD='$(
+	p="${PWD/$HOME/}";
+	[ "$p" != "$PWD" ] && echo -n "~";
+	i=0;
+	until [ "$p" = "$d" ]; do
+	    p=${p#*/};
+	    d=${p%%/*};
+	    dirnames[i]=$d;
+	    (( i += 1 ));
+	done;
+	for i in $(seq 0 $((${#dirnames[@]} - 1))); do
+	    if [ $i -eq 0 ] || [ $i -eq $((${#dirnames[@]} - 1)) ] || [ ${#dirnames[$i]} -le '"$STR_MAX_LENGTH"' ]; then
+	        echo -n "'"$DIR_SEP_COLOR"'/'"$WORKING_DIR_COLOR"'${dirnames[$i]}";
+	    else
+	        echo -n "'"$DIR_SEP_COLOR"'/'"$ABBR_DIR_COLOR"'${dirnames[$i]:0:'"$STR_MAX_LENGTH"'}.";
+	    fi;
+	done
+)'
+
+
+PS1="$USER_COLOR\u@$HOST_COLOR\h$RVM_GEMSET_COLOR[\$(rvm_version)]$RESET_COLOR:$WORKING_DIR_COLOR$NEW_PWD $GIT_BRANCH_COLOR\$(__parse_git_branch)$RESET_COLOR \$ "
 
 # two line version:
 # PS1="\n\[\e[0;36m\]┌─[\[\e[0m\]\[\e[1;32m\]\u\[\e[0m\]\[\e[1;36m\]@\[\e[0m\]\[\e[1;34m\]\h\[\e[0m\]\[\e[0;36m\]]─[\[\e[0m\]\[\e[1;37m\]\w\[\e[0m\]\[\e[0;36m\]]\[\e[0;36m\]─[\[\e[0m\]\[\e[0;33m\]\$(__parse_git_branch)\[\e[0m\]\[\e[0;36m\]]\[\e[0m\]\n\[\e[0;36m\]└─[\[\e[0m\]\[\e[1;37m\]\$\[\e[0m\]\[\e[0;36m\]]› \[\e[0m\]"
