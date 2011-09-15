@@ -7,10 +7,6 @@ unset USERNAME
 # $(git branch 2>/dev/null | grep '^*' | colrm 1 2)
 # git info: "...\`git branch 2> /dev/null | grep -e ^* | sed -E  s/^\\\\\\\\\*\ \(.+\)$/\(\\\\\\\\\1\)\ /\`
 
-__parse_git_branch() {
-  git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/'
-}
-
 function rvm_version {
   local gemset=$(echo $GEM_HOME | awk -F'@' '{print $2}')
   [ "$gemset" != "" ] && gemset="@$gemset"
@@ -20,6 +16,12 @@ function rvm_version {
   [ "$full" != "" ] && echo "$full"
 }
 
+function parse_git_dirty {
+  [[ $(git status 2> /dev/null | tail -n1) != "nothing to commit (working directory clean)" ]] && echo "*"
+}
+function parse_git_branch {
+  git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/\1$(parse_git_dirty)/"
+}
 
 # Black 0;30  Dark Gray 1;30
 # Blue 0;34   Light Blue 1;34
@@ -32,15 +34,23 @@ function rvm_version {
 
 STR_MAX_LENGTH=0
 
-USER_COLOR='\[\e[0;33m\]'
-HOST_COLOR='\[\e[0;32m\]'
+GREEN='\[\e[0;32m\]'
+BLUE='\[\e[0;34m\]'
+CYAN='\[\e[0;36m\]'
+RED='\[\e[0;31m\]'
+PURPLE='\[\e[0;35m\]'
+YELLOW='\[\e[0;33m\]'
+WHITE='\[\e[0;37m\]'
+
+USER_COLOR=$YELLOW
+HOST_COLOR=$GREEN
 RESET_COLOR='\[\e[0m\]'
-WORKING_DIR_COLOR='\[\e[1;36m\]'
-ABBR_DIR_COLOR='\[\e[0;36m\]'
+WORKING_DIR_COLOR=$CYAN
+ABBR_DIR_COLOR=$CYAN
 DIR_SEP_COLOR=$ABBR_DIR_COLOR
-GIT_BRANCH_COLOR='\[\e[0;35m\]'
-RVM_GEMSET_COLOR='\[\e[0;34m\]'
-PROMPT_COLOR='\[\e[0;37m\]'
+GIT_BRANCH_COLOR=$PURPLE
+RVM_GEMSET_COLOR=$BLUE
+PROMPT_COLOR=$WHITE
 
 NEW_PWD='$(
 	p="${PWD/$HOME/}";
@@ -61,8 +71,7 @@ NEW_PWD='$(
 	done
 )'
 
-
-PS1="$USER_COLOR\u@$HOST_COLOR\h$RVM_GEMSET_COLOR[\$(rvm_version)]$RESET_COLOR:$WORKING_DIR_COLOR$NEW_PWD $GIT_BRANCH_COLOR\$(__parse_git_branch)$RESET_COLOR \$ "
+PS1="$USER_COLOR\u@$HOST_COLOR\h$RVM_GEMSET_COLOR[\$(rvm_version)]$RESET_COLOR:$WORKING_DIR_COLOR$NEW_PWD $GIT_BRANCH_COLOR\$(parse_git_branch)$RESET_COLOR \$ "
 
 # two line version:
 # PS1="\n\[\e[0;36m\]┌─[\[\e[0m\]\[\e[1;32m\]\u\[\e[0m\]\[\e[1;36m\]@\[\e[0m\]\[\e[1;34m\]\h\[\e[0m\]\[\e[0;36m\]]─[\[\e[0m\]\[\e[1;37m\]\w\[\e[0m\]\[\e[0;36m\]]\[\e[0;36m\]─[\[\e[0m\]\[\e[0;33m\]\$(__parse_git_branch)\[\e[0m\]\[\e[0;36m\]]\[\e[0m\]\n\[\e[0;36m\]└─[\[\e[0m\]\[\e[1;37m\]\$\[\e[0m\]\[\e[0;36m\]]› \[\e[0m\]"
