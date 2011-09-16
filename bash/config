@@ -3,10 +3,6 @@ export EDITOR
 
 unset USERNAME
 
-# PS1="\[\e[32;1m\]\u@\[\e[34;1m\]\h\[\e[36;1m\] \W/ > \[\e[0m\]"
-# $(git branch 2>/dev/null | grep '^*' | colrm 1 2)
-# git info: "...\`git branch 2> /dev/null | grep -e ^* | sed -E  s/^\\\\\\\\\*\ \(.+\)$/\(\\\\\\\\\1\)\ /\`
-
 function rvm_version {
   local gemset=$(echo $GEM_HOME | awk -F'@' '{print $2}')
   [ "$gemset" != "" ] && gemset="@$gemset"
@@ -16,11 +12,28 @@ function rvm_version {
   [ "$full" != "" ] && echo "$full"
 }
 
-function parse_git_dirty {
-  [[ $(git status 2> /dev/null | tail -n1) != "nothing to commit (working directory clean)" ]] && echo "*"
+function git_branch {
+  # git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/\1$(parse_git_dirty)/"
+  git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/\1/"
 }
-function parse_git_branch {
-  git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/\1$(parse_git_dirty)/"
+
+function git_status {
+  local STATUS=`git status 2>&1`
+  if [[ "$STATUS" == *'Not a git repository'* ]]
+  then
+    echo "$"
+  else
+    if [[ "$STATUS" == *'working directory clean'* ]]
+    then
+      echo " $"
+      # -e '\033[0;32m±\033[m'
+    elif [[ "$STATUS" == *'to be committed'* ]]
+    then
+      echo -e ' \033[0;32m±\033[m'
+    else
+      echo -e ' \033[0;31m±\033[m'
+    fi
+  fi
 }
 
 # Black 0;30  Dark Gray 1;30
@@ -71,7 +84,7 @@ NEW_PWD='$(
 	done
 )'
 
-PS1="$USER_COLOR\u@$HOST_COLOR\h$RVM_GEMSET_COLOR[\$(rvm_version)]$RESET_COLOR:$WORKING_DIR_COLOR$NEW_PWD $GIT_BRANCH_COLOR\$(parse_git_branch)$RESET_COLOR \$ "
+PS1="$USER_COLOR\u@$HOST_COLOR\h$RVM_GEMSET_COLOR[\$(rvm_version)]$RESET_COLOR:$WORKING_DIR_COLOR$NEW_PWD $GIT_BRANCH_COLOR\$(git_branch)$RESET_COLOR\$(git_status)$RESET_COLOR "
 
 # two line version:
 # PS1="\n\[\e[0;36m\]┌─[\[\e[0m\]\[\e[1;32m\]\u\[\e[0m\]\[\e[1;36m\]@\[\e[0m\]\[\e[1;34m\]\h\[\e[0m\]\[\e[0;36m\]]─[\[\e[0m\]\[\e[1;37m\]\w\[\e[0m\]\[\e[0;36m\]]\[\e[0;36m\]─[\[\e[0m\]\[\e[0;33m\]\$(__parse_git_branch)\[\e[0m\]\[\e[0;36m\]]\[\e[0m\]\n\[\e[0;36m\]└─[\[\e[0m\]\[\e[1;37m\]\$\[\e[0m\]\[\e[0;36m\]]› \[\e[0m\]"
