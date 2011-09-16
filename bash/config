@@ -25,7 +25,7 @@ function git_status {
   else
     if [[ "$STATUS" == *'working directory clean'* ]]
     then
-      echo -e ' \033[0;32m$\033[m'
+      echo -e ' \033[0;35m$\033[m'
       # -e '\033[0;32m±\033[m'
     elif [[ "$STATUS" == *'to be committed'* ]]
     then
