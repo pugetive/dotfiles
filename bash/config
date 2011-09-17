@@ -21,17 +21,17 @@ function git_status {
   local STATUS=`git status 2>&1`
   if [[ "$STATUS" == *'Not a git repository'* ]]
   then
-    echo "$"
+    echo -e '\033[1;37m$\033[m'
   else
     if [[ "$STATUS" == *'working directory clean'* ]]
     then
-      echo -e ' \033[0;35m$\033[m'
+      echo -e ' \033[1;35m$\033[m'
       # -e '\033[0;32m±\033[m'
     elif [[ "$STATUS" == *'to be committed'* ]]
     then
-      echo -e ' \033[0;32m±\033[m'
+      echo -e ' \033[1;32m±\033[m'
     else
-      echo -e ' \033[0;31m±\033[m'
+      echo -e ' \033[1;31m±\033[m'
     fi
   fi
 }
