@@ -84,7 +84,7 @@ NEW_PWD='$(
 	done
 )'
 
-PS1="$USER_COLOR\u@$HOST_COLOR\h$RVM_GEMSET_COLOR[\$(rvm_version)]$RESET_COLOR:$WORKING_DIR_COLOR$NEW_PWD $GIT_BRANCH_COLOR\$(git_branch)$RESET_COLOR\$(git_status)$RESET_COLOR "
+PS1="\n$USER_COLOR\u@$HOST_COLOR\h$RVM_GEMSET_COLOR[\$(rvm_version)]$RESET_COLOR:$WORKING_DIR_COLOR$NEW_PWD $GIT_BRANCH_COLOR\$(git_branch)\n$RESET_COLOR\$(git_status)$RESET_COLOR "
 
 # two line version:
 # PS1="\n\[\e[0;36m\]┌─[\[\e[0m\]\[\e[1;32m\]\u\[\e[0m\]\[\e[1;36m\]@\[\e[0m\]\[\e[1;34m\]\h\[\e[0m\]\[\e[0;36m\]]─[\[\e[0m\]\[\e[1;37m\]\w\[\e[0m\]\[\e[0;36m\]]\[\e[0;36m\]─[\[\e[0m\]\[\e[0;33m\]\$(__parse_git_branch)\[\e[0m\]\[\e[0;36m\]]\[\e[0m\]\n\[\e[0;36m\]└─[\[\e[0m\]\[\e[1;37m\]\$\[\e[0m\]\[\e[0;36m\]]› \[\e[0m\]"
