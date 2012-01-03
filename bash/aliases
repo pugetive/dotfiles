@@ -1,5 +1,5 @@
 # Shortcuts
-alias rgrep='find . -type f|xargs grep';
+alias rgrep='find . -type f -print0|xargs -0 grep -s';
 alias rf='find . -name';
 alias la='ls -alh';
 alias tf='tail -f';
@@ -27,6 +27,7 @@ alias web-free='lsof -i tcp:3000 -Fp|tr -d p|xargs kill -9'
 # Fat Fingering
 alias emacs="echo 'type that again, mate'";
 alias rgrpe='rgrep'
+alias mroe='more'
 
 
 # Mac Dock spacer command
