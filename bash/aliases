@@ -10,6 +10,7 @@ alias disk='du -h --max-depth=1'
 alias cs='cd ~/Sites';
 alias t='rake spec';
 alias c='clear';
+alias timestamp='date +%Y-%m-%d-%H%M%S';
 
 # Git
 alias gb='git branch'
