@@ -16,7 +16,8 @@ alias timestamp='date +%Y-%m-%d-%H%M%S';
 alias gb='git branch'
 alias gd='git diff'
 alias gs='git status'
-alias gp='git pull';
+alias gp='git pull'
+alias ga='git add'
 
 # Web Server
 alias eh='sudo mate /etc/hosts'
