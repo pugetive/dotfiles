@@ -46,4 +46,5 @@ alias mroe='more'
 alias flush='dscacheutil -flushcache'
 # Doc spacer
 # defaults write com.apple.dock persistent-apps -array-add '{"tile-type"="spacer-tile";}'; killall Dock'
+alias window='screencapture -iWc'
 
