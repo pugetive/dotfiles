@@ -18,7 +18,7 @@ theme_precmd () {
 }
 
 setopt prompt_subst
-PROMPT='%B%F{yellow}%n%B%F{green}@%M %B%F{cyan}%~%B%F{magenta}${vcs_info_msg_0_} %v
+PROMPT='%B%F{yellow}%n%B%F{green}@%M %B%F{cyan}%-3~ %c%B%F{magenta}${vcs_info_msg_0_} %v
 %{$reset_color%}%% '
 
 autoload -U add-zsh-hook
