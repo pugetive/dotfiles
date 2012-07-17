@@ -42,7 +42,7 @@ export PATH=/Users/todd/.rbenv/bin:/Users/todd/.rbenv/shims:/usr/bin:/bin:/usr/s
 
 eval "$(rbenv init -)"
 
-export PATH="$HOME/.rbenv/bin:$PATH"
+export PATH="$HOME/.rbenv/bin:/usr/local/git/bin:$PATH"
 export EDITOR="emacs"
 
 alias cb='cd ~/Sites/backstage'

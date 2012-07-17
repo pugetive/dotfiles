@@ -21,10 +21,17 @@ alias mdot='mate ~/Sites/dotfiles'
 #------------------------
 # Directories
 #------------------------
+
+# Todd
 alias cs='cd ~/Sites';
-alias cb='cd ~/Sites/backstage'
 alias ch='cd ~/Sites/hopville'
+
+# Vittana
+alias cb='cd ~/Sites/backstage'
 alias cv='cd ~/Sites/zero'
+
+# Orbridge
+alias cu='cd ~/Sites/unicorn'
 
 #------------------------
 # Git
