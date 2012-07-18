@@ -15,7 +15,7 @@ alias timestamp='date +%Y-%m-%d-%H%M%S';
 # Edit
 #------------------------
 alias m='mate .'
-alias mr='mate app Capfile config db doc Gemfile lib public vendor'
+alias mr='mate app Capfile config db doc Gemfile lib public README* vendor'
 alias mdot='mate ~/Sites/dotfiles'
 
 #------------------------
