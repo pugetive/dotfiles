@@ -1,15 +1,27 @@
 #------------------------
+# Reminders (use these more)
+#------------------------
+
+alias tf='tail -f';
+alias timestamp='date +%Y-%m-%d-%H%M%S';
+
+#------------------------
+# Mac
+#------------------------
+alias flush='dscacheutil -flushcache'
+alias window='screencapture -iWc'
+# Doc spacer
+# defaults write com.apple.dock persistent-apps -array-add '{"tile-type"="spacer-tile";}'; killall Dock
+
+#------------------------
 # Shortcuts
 #------------------------
+
 alias c='clear';
 alias disk='du -h --max-depth=1'
 alias la='ls -alh';
 alias rf='find . -name';
 alias rgrep='find . -type f -print0|xargs -0 grep -s';
-alias spec='/opt/local/bin/spec --options ~/spec.opts'
-alias t='rake spec';
-alias tf='tail -f';
-alias timestamp='date +%Y-%m-%d-%H%M%S';
 
 #------------------------
 # Edit
@@ -60,14 +72,6 @@ alias emacs="echo 'type that again, mate'";
 alias rgrpe='rgrep'
 alias mroe='more'
 
-#------------------------
-# Mac
-#------------------------
-alias flush='dscacheutil -flushcache'
-alias window='screencapture -iWc'
-# Doc spacer
-# defaults write com.apple.dock persistent-apps -array-add '{"tile-type"="spacer-tile";}'; killall Dock
-
 
 #------------------------
 # Chopping Block
@@ -75,3 +79,5 @@ alias window='screencapture -iWc'
 
 alias watch-css='sass --watch public/stylesheets/_sass:public/stylesheets --style=compressed'
 alias cuke='cucumber --format pretty'
+alias spec='/opt/local/bin/spec --options ~/spec.opts'
+alias t='rake spec';
