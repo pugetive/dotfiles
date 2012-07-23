@@ -20,6 +20,7 @@ alias window='screencapture -iWc'
 alias c='clear';
 alias disk='du -h --max-depth=1'
 alias la='ls -alh';
+alias rd='rm -rf'
 alias rf='find . -name';
 alias rgrep='find . -type f -print0|xargs -0 grep -s';
 
@@ -52,8 +53,11 @@ alias ga='git add'
 alias gap='git add -p'
 alias gb='git branch'
 alias gc='git checkout'
+alias gcn='git clean -n'
+alias gcf='git clean -f'
 alias gd='git diff'
 alias gp='git pull'
+alias grh='git reset --hard HEAD'
 alias gs='git status --short'
 
 #------------------------
