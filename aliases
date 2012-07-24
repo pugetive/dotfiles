@@ -14,15 +14,27 @@ alias window='screencapture -iWc'
 # defaults write com.apple.dock persistent-apps -array-add '{"tile-type"="spacer-tile";}'; killall Dock
 
 #------------------------
-# Shortcuts
+# Terminal
 #------------------------
 
 alias c='clear';
+
+#------------------------
+# Disk & Files
+#------------------------
+
 alias disk='du -h --max-depth=1'
 alias la='ls -alh';
 alias rd='rm -rf'
 alias rf='find . -name';
 alias rgrep='find . -type f -print0|xargs -0 grep -s';
+
+#------------------------
+# Network
+#------------------------
+
+alias ip='curl ifconfig.me';
+alias HEAD='curl -I';
 
 #------------------------
 # Edit
