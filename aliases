@@ -33,8 +33,9 @@ alias rgrep='find . -type f -print0|xargs -0 grep -s';
 # Network
 #------------------------
 
-alias ip='curl ifconfig.me';
 alias HEAD='curl -I';
+alias local-ip='ipconfig getifaddr en0'
+alias remote-ip='curl ifconfig.me'
 
 #------------------------
 # Edit
