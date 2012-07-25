@@ -44,6 +44,14 @@ alias m='mate .'
 alias mr='mate app Capfile config db doc Gemfile lib public README* vendor'
 alias mdot='mate ~/Sites/dotfiles'
 
+
+#------------------------
+# Rails
+#------------------------
+alias rc="rails c"
+alias rr="rails r"
+alias rg="rails g"
+
 #------------------------
 # Directories
 #------------------------
