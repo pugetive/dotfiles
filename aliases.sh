@@ -48,7 +48,7 @@ alias mdot='mate ~/Sites/dotfiles'
 #------------------------
 # Rails
 #------------------------
-alias s='rails s'
+alias rs='rails s'
 alias rc='rails c'
 alias rr='rails r'
 alias rg='rails g'
