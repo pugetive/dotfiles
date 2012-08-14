@@ -86,7 +86,8 @@ alias gs='git status --short'
 #------------------------
 # Web Server
 #------------------------
-alias eh='sudo mate /etc/hosts'
+alias mh='sudo mate /etc/hosts'
+alias mk='mate ~/.ssh/known_hosts'
 alias web-restart='sudo /opt/local/apache2/bin/apachectl restart'
 alias web-start='sudo /opt/local/apache2/bin/apachectl start'
 alias web-stop='sudo /opt/local/apache2/bin/apachectl stop'
