@@ -76,12 +76,16 @@ alias ga='git add'
 alias gap='git add -p'
 alias gb='git branch'
 alias gc='git checkout'
+alias gm='git merge'
 alias gcn='git clean -n'
 alias gcf='git clean -f'
 alias gd='git diff'
 alias gp='git pull'
 alias grh='git reset --hard HEAD'
 alias gs='git status --short'
+
+alias dev='git checkout development'
+alias mas='git checkout master'
 
 #------------------------
 # Web Server
