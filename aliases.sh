@@ -53,6 +53,7 @@ alias rc='rails c'
 alias rr='rails r'
 alias rg='rails g'
 
+alias cache='find tmp/cache/* -type d|grep -v assets|grep -v sass|xargs rm -rf'
 
 #------------------------
 # Directories
@@ -61,6 +62,7 @@ alias rg='rails g'
 # Todd
 alias cs='cd ~/Sites';
 alias ch='cd ~/Sites/hopville'
+alias ck='cd ~/Sites/killer'
 
 # Vittana
 alias cb='cd ~/Sites/backstage'
@@ -84,8 +86,13 @@ alias gp='git pull'
 alias grh='git reset --hard HEAD'
 alias gs='git status --short'
 
+alias gpd='git push origin development'
+alias gpm='git push origin master'
+alias csd='cap staging deploy'
+
 alias dev='git checkout development'
 alias mas='git checkout master'
+
 
 #------------------------
 # Web Server
