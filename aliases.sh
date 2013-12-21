@@ -36,12 +36,13 @@ alias rgrep='find . -type f -print0|xargs -0 grep -s';
 alias HEAD='curl -I';
 alias local-ip='ipconfig getifaddr en0'
 alias remote-ip='curl ifconfig.me'
+alias eh='sudo mate /etc/hosts'
 
 #------------------------
 # Edit
 #------------------------
 alias m='mate .'
-alias mr='mate app Capfile config db doc Gemfile lib public README* vendor'
+alias mr='mate app Capfile config db doc Gemfile lib public README* test vendor'
 alias mdot='mate ~/Sites/dotfiles'
 
 
