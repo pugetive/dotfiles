@@ -49,10 +49,10 @@ alias mdot='mate ~/Sites/dotfiles'
 #------------------------
 # Rails
 #------------------------
-alias rs='rails s'
-alias rc='rails c'
-alias rr='rails r'
-alias rg='rails g'
+alias rs='bundle exec rails s'
+alias rc='bundle exec rails c'
+alias rr='bundle exec rails r'
+alias rg='bundle exec rails g'
 
 alias cache='find tmp/cache/* -type d|grep -v assets|grep -v sass|xargs rm -rf'
 
@@ -64,6 +64,9 @@ alias cache='find tmp/cache/* -type d|grep -v assets|grep -v sass|xargs rm -rf'
 alias cs='cd ~/Sites';
 alias ch='cd ~/Sites/hopville'
 alias ck='cd ~/Sites/killer'
+
+# Expiri
+alias cn='cd ~/Sites/nomad'
 
 # Vittana
 alias cb='cd ~/Sites/backstage'
