@@ -64,16 +64,10 @@ alias cache='find tmp/cache/* -type d|grep -v assets|grep -v sass|xargs rm -rf'
 alias cs='cd ~/Sites';
 alias ch='cd ~/Sites/hopville'
 alias ck='cd ~/Sites/killer'
+alias cg='cd ~/Sites/styleguides'
 
 # Expiri
 alias cn='cd ~/Sites/nomad'
-
-# Vittana
-alias cb='cd ~/Sites/backstage'
-alias cv='cd ~/Sites/zero'
-
-# Orbridge
-alias cu='cd ~/Sites/unicorn'
 
 #------------------------
 # Git
