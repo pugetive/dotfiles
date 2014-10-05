@@ -90,7 +90,8 @@ alias csd='cap staging deploy'
 
 alias dev='git checkout development'
 alias mas='git checkout master'
-
+alias stagger='git push origin development && cap staging deploy'
+alias stg='git push origin development && cap staging deploy'
 
 #------------------------
 # Web Server
