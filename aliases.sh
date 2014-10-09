@@ -36,14 +36,16 @@ alias rgrep='find . -type f -print0|xargs -0 grep -s';
 alias HEAD='curl -I';
 alias local-ip='ipconfig getifaddr en0'
 alias remote-ip='curl ifconfig.me'
-alias eh='sudo mate /etc/hosts'
+alias eh='sudo subl /etc/hosts'
 
 #------------------------
 # Edit
 #------------------------
-alias m='mate .'
-alias mr='mate app Capfile config db doc Gemfile lib public README* test vendor'
-alias mdot='mate ~/Sites/dotfiles'
+alias mr='subl .'
+alias sdot='subl ~/Sites/dotfiles'
+alias s='subl'
+alias sr='subl .'
+
 
 
 #------------------------
@@ -96,8 +98,8 @@ alias stg='git push origin development && cap staging deploy'
 #------------------------
 # Web Server
 #------------------------
-alias mh='sudo mate /etc/hosts'
-alias mk='mate ~/.ssh/known_hosts'
+alias mh='sudo subl /etc/hosts'
+alias mk='subl ~/.ssh/known_hosts'
 alias web-restart='sudo /opt/local/apache2/bin/apachectl restart'
 alias web-start='sudo /opt/local/apache2/bin/apachectl start'
 alias web-stop='sudo /opt/local/apache2/bin/apachectl stop'
@@ -106,7 +108,7 @@ alias web-free='lsof -i tcp:3000 -Fp|tr -d p|xargs kill -9'
 #------------------------
 # Fat Fingering
 #------------------------
-alias emacs="echo 'type that again, mate'";
+alias emacs="echo 'type that again, subliminal man'";
 alias rgrpe='rgrep'
 alias mroe='more'
 
