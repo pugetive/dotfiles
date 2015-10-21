@@ -44,9 +44,16 @@ alias eh='sudo subl /etc/hosts'
 alias mr='subl .'
 alias sdot='subl ~/Sites/dotfiles'
 alias s='subl'
-alias sr='subl .'
+alias en='subl nomad.sublime-project'
 
-
+# alias C 'eval "if (\!* =~ *.c) then \\
+#    echo "C quitting: no .c on end of \!* please." \\
+# else \\
+#    if (-e \!*) mv \!* \!*.old \\
+#    echo \!*.c SENT TO cc \\
+#    cc -s \!*.c -o \!* \\
+#    if (-e \!*) chmod 311 \!* \\
+# endif"'
 
 #------------------------
 # Rails
@@ -67,9 +74,11 @@ alias cs='cd ~/Sites';
 alias ch='cd ~/Sites/hopville'
 alias ck='cd ~/Sites/killer'
 alias cg='cd ~/Sites/styleguides'
+alias ct='cd ~/Sites/pugetive.com'
 
 # Expiri
 alias cn='cd ~/Sites/nomad'
+alias cb='cd ~/Sites/beacon'
 
 #------------------------
 # Git
@@ -85,6 +94,7 @@ alias gd='git diff'
 alias gp='git pull'
 alias grh='git reset --hard HEAD'
 alias gs='git status --short'
+alias gu='git reset --soft HEAD^'
 
 alias gpd='git push origin development'
 alias gpm='git push origin master'
