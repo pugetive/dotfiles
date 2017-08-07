@@ -72,14 +72,11 @@ alias cache='find tmp/cache/* -type d|grep -v assets|grep -v sass|xargs rm -rf'
 # Todd
 alias cs='cd ~/Sites';
 alias ch='cd ~/Sites/hopville'
-alias ck='cd ~/Sites/killer'
-alias cg='cd ~/Sites/styleguides'
-alias ct='cd ~/Sites/pugetive.com'
+# alias ck='cd ~/Sites/killer'
+# alias cg='cd ~/Sites/styleguides'
+# alias ct='cd ~/Sites/pugetive.com'
+alias ct='cd ~/Sites/toddgehman.com'
 alias cf='cd ~/Sites/fair'
-
-# Expiri
-alias cn='cd ~/Sites/nomad'
-alias cb='cd ~/Sites/beacon'
 
 #------------------------
 # Git
