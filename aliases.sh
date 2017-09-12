@@ -76,7 +76,7 @@ alias ch='cd ~/Sites/hopville'
 # alias cg='cd ~/Sites/styleguides'
 # alias ct='cd ~/Sites/pugetive.com'
 alias ct='cd ~/Sites/toddgehman.com'
-alias cf='cd ~/Sites/fair'
+alias cf='cd ~/Sites/fair.org'
 
 #------------------------
 # Git
