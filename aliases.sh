@@ -74,8 +74,8 @@ alias cs='cd ~/Sites';
 alias ch='cd ~/Sites/hopville'
 # alias ck='cd ~/Sites/killer'
 # alias cg='cd ~/Sites/styleguides'
-# alias ct='cd ~/Sites/pugetive.com'
-alias ct='cd ~/Sites/toddgehman.com'
+alias ct='cd ~/Sites/pugetive.com'
+# alias ct='cd ~/Sites/toddgehman.com'
 alias cf='cd ~/Sites/fair.org'
 
 #------------------------
