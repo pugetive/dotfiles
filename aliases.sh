@@ -72,11 +72,20 @@ alias cache='find tmp/cache/* -type d|grep -v assets|grep -v sass|xargs rm -rf'
 # Todd
 alias cs='cd ~/Sites';
 alias ch='cd ~/Sites/hopville'
-# alias ck='cd ~/Sites/killer'
-# alias cg='cd ~/Sites/styleguides'
 alias ct='cd ~/Sites/pugetive.com'
+# alias ck='cd ~/Sites/killer'
 # alias ct='cd ~/Sites/toddgehman.com'
+
+# FAIR
 alias cf='cd ~/Sites/fair.org'
+
+
+
+#------------------------
+# Testing
+#------------------------
+alias t='bundle exec rspec';
+
 
 #------------------------
 # Git
@@ -95,13 +104,13 @@ alias gs='git status --short'
 alias gu='git reset --soft HEAD^'
 
 alias gpd='git push origin development'
+alias stg='git push origin development && cap staging deploy'
 alias gpm='git push origin master'
 alias csd='cap staging deploy'
 
 alias dev='git checkout development'
 alias mas='git checkout master'
-alias stagger='git push origin development && cap staging deploy'
-alias stg='git push origin development && cap staging deploy'
+
 
 #------------------------
 # Web Server
@@ -128,4 +137,5 @@ alias mroe='more'
 alias watch-css='sass --watch public/stylesheets/_sass:public/stylesheets --style=compressed'
 alias cuke='cucumber --format pretty'
 alias spec='/opt/local/bin/spec --options ~/spec.opts'
-alias t='rake spec';
+alias stagger='git push origin development && cap staging deploy'
+# alias cg='cd ~/Sites/styleguides'
