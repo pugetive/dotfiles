@@ -111,11 +111,11 @@ alias csd='cap staging deploy'
 alias dev='git checkout development'
 alias mas='git checkout master'
 
+alias launch='git checkout master && git merge development && git push origin master && cap production deploy'
 
 #------------------------
 # Web Server
 #------------------------
-alias mh='sudo subl /etc/hosts'
 alias mk='subl ~/.ssh/known_hosts'
 alias web-restart='sudo /opt/local/apache2/bin/apachectl restart'
 alias web-start='sudo /opt/local/apache2/bin/apachectl start'
