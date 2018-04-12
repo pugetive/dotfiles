@@ -60,10 +60,10 @@ alias en='subl nomad.sublime-project'
 #------------------------
 alias rs='bundle exec rails s'
 alias rc='bundle exec rails c'
-alias rr='bundle exec rails r'
 alias rg='bundle exec rails g'
 
 alias cache='find tmp/cache/* -type d|grep -v assets|grep -v sass|xargs rm -rf'
+alias dj='bundle exec rake jobs:work'
 
 #------------------------
 # Directories
@@ -71,6 +71,7 @@ alias cache='find tmp/cache/* -type d|grep -v assets|grep -v sass|xargs rm -rf'
 
 # Todd
 alias cs='cd ~/Sites';
+alias cc='cd ~/code';
 alias ch='cd ~/Sites/hopville'
 alias ct='cd ~/Sites/pugetive.com'
 # alias ck='cd ~/Sites/killer'
@@ -112,6 +113,8 @@ alias dev='git checkout development'
 alias mas='git checkout master'
 
 alias launch='git checkout master && git merge development && git push origin master && cap production deploy'
+
+alias squash='git rebase -i master'
 
 #------------------------
 # Web Server
