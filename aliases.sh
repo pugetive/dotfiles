@@ -2,8 +2,8 @@
 # Reminders (use these more)
 #------------------------
 
-alias tf='tail -f';
-alias timestamp='date +%Y-%m-%d-%H%M%S';
+alias tf='tail -f'
+alias timestamp='date +%Y-%m-%d-%H%M%S'
 
 #------------------------
 # Mac
@@ -17,23 +17,24 @@ alias window='screencapture -iWc'
 # Terminal
 #------------------------
 
-alias c='clear';
+alias c='clear'
 
 #------------------------
 # Disk & Files
 #------------------------
 
 alias disk='du -h --max-depth=1'
-alias la='ls -alh';
+alias la='ls -alh'
 alias rd='rm -rf'
-alias rf='find . -name';
-alias rgrep='find . -type f -print0|xargs -0 grep -s';
+alias rf='find . -name'
+alias rgrep='find . -type f -print0|xargs -0 grep -s'
 
 #------------------------
 # Network
 #------------------------
 
-alias HEAD='curl -I';
+alias HEAD='curl -I'
+alias GET='curl '
 alias local-ip='ipconfig getifaddr en0'
 alias remote-ip='curl ifconfig.me'
 alias eh='sudo subl /etc/hosts'
@@ -70,8 +71,8 @@ alias dj='bundle exec rake jobs:work'
 #------------------------
 
 # Todd
-alias cs='cd ~/code';
-alias cc='cd ~/code';
+alias cs='cd ~/code'
+alias cc='cd ~/code'
 alias ch='cd ~/code/hopville'
 alias ct='cd ~/code/pugetive.com'
 # alias ck='cd ~/Sites/killer'
@@ -85,7 +86,7 @@ alias cf='cd ~/code/fair.org'
 #------------------------
 # Testing
 #------------------------
-alias t='bundle exec rspec';
+alias t='bundle exec rspec'
 
 
 #------------------------
@@ -128,7 +129,7 @@ alias web-free='lsof -i tcp:3000 -Fp|tr -d p|xargs kill -9'
 #------------------------
 # Fat Fingering
 #------------------------
-alias emacs="echo 'type that again, subliminal man'";
+alias emacs="echo 'type that again, subliminal man'"
 alias rgrpe='rgrep'
 alias mroe='more'
 
