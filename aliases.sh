@@ -42,7 +42,7 @@ alias eh='sudo subl /etc/hosts'
 # Edit
 #------------------------
 alias mr='subl .'
-alias sdot='subl ~/Sites/dotfiles'
+alias sdot='subl ~/code/dotfiles'
 alias s='subl'
 alias en='subl nomad.sublime-project'
 
@@ -70,15 +70,15 @@ alias dj='bundle exec rake jobs:work'
 #------------------------
 
 # Todd
-alias cs='cd ~/Sites';
+alias cs='cd ~/code';
 alias cc='cd ~/code';
-alias ch='cd ~/Sites/hopville'
-alias ct='cd ~/Sites/pugetive.com'
+alias ch='cd ~/code/hopville'
+alias ct='cd ~/code/pugetive.com'
 # alias ck='cd ~/Sites/killer'
 # alias ct='cd ~/Sites/toddgehman.com'
 
 # FAIR
-alias cf='cd ~/Sites/fair.org'
+alias cf='cd ~/code/fair.org'
 
 
 
@@ -132,13 +132,9 @@ alias emacs="echo 'type that again, subliminal man'";
 alias rgrpe='rgrep'
 alias mroe='more'
 
-
 #------------------------
 # Chopping Block
 #------------------------
 
-alias watch-css='sass --watch public/stylesheets/_sass:public/stylesheets --style=compressed'
 alias cuke='cucumber --format pretty'
 alias spec='/opt/local/bin/spec --options ~/spec.opts'
-alias stagger='git push origin development && cap staging deploy'
-# alias cg='cd ~/Sites/styleguides'
