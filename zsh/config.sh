@@ -36,12 +36,8 @@ source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
 
-# export PATH=/Users/todd/.rbenv/bin:/Users/todd/.rbenv/shims:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:./bin
-# eval "$(rbenv init -)"
-
 export PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:./bin:$HOME/bin
-
-# export PATH="$HOME/.rbenv/bin:/usr/local/git/bin:$PATH"
 export PATH="/usr/local/git/bin:$PATH"
+
 export EDITOR="emacs"
 export VISUAL="emacs"
