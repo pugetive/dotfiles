@@ -20,7 +20,7 @@ theme_precmd () {
 
 setopt prompt_subst
 PROMPT='
-%b$FG[245]%n%b$FG[012]@%m %b$FG[081]%-3~ %B$FG[081]%c%b%F{magenta}${vcs_info_msg_0_}
+%b$FG[250]%n%b$FG[012]@%m %b$FG[081]%-3~ %B$FG[081]%c%b%F{magenta}${vcs_info_msg_0_}
 %B ♫  %b$FG[189]'
 
 #☼
