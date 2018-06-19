@@ -20,7 +20,7 @@ theme_precmd () {
 
 setopt prompt_subst
 PROMPT='
-%b%F{white}%n%b%F{blue}@%m %b%F{cyan}%-3~ %B%F{cyan}%c%b%F{magenta}${vcs_info_msg_0_}
+%b%F{grey}%n%b$FG[012]@%m %b$FG[081]%-3~ %B$FG[081]%c%b$FG[126]${vcs_info_msg_0_}
 %B ♫  %b%F{white}'
 
 #☼
