@@ -138,7 +138,3 @@ alias mroe='more'
 
 alias cuke='cucumber --format pretty'
 alias spec='/opt/local/bin/spec --options ~/spec.opts'
-<<<<<<< HEAD
-alias stagger='git push origin development && cap staging deploy'
-=======
->>>>>>> 26992e38e90728bfbe7aa7de930e984c4a03ba46
