@@ -42,7 +42,7 @@ alias eh='sudo subl /etc/hosts'
 # Edit
 #------------------------
 alias mr='subl .'
-alias sdot='subl ~/Sites/dotfiles'
+alias sdot='subl ~/code/dotfiles'
 alias s='subl'
 alias en='subl nomad.sublime-project'
 
@@ -63,23 +63,20 @@ alias rc='bundle exec rails c'
 alias rr='bundle exec rails r'
 alias rg='bundle exec rails g'
 
-alias cache='find tmp/cache/* -type d|grep -v assets|grep -v sass|xargs rm -rf'
+alias cache='touch tmp/caching-dev.txt'
+alias uncache='rm tmp/caching-dev.txt'
 
 #------------------------
 # Directories
 #------------------------
 
 # Todd
-alias cs='cd ~/Sites';
-alias ch='cd ~/Sites/hopville'
-alias ct='cd ~/Sites/pugetive.com'
-# alias ck='cd ~/Sites/killer'
-# alias ct='cd ~/Sites/toddgehman.com'
-
-# FAIR
-alias cf='cd ~/Sites/fair.org'
-
-
+alias cs='cd ~/code';
+alias ch='cd ~/code/hopville'
+alias ct='cd ~/code/pugetive.com'
+alias cg='cd ~/code/gems'
+alias cc='cd ~/code/catnip'
+alias cf='cd ~/code/fair.org'
 
 #------------------------
 # Testing
@@ -111,7 +108,7 @@ alias csd='cap staging deploy'
 alias dev='git checkout development'
 alias mas='git checkout master'
 
-alias launch='git checkout master && git merge development && git push origin master && cap production deploy'
+alias launch='mas && git merge development && git push origin master && cap production deploy && dev'
 
 #------------------------
 # Web Server
@@ -138,4 +135,3 @@ alias watch-css='sass --watch public/stylesheets/_sass:public/stylesheets --styl
 alias cuke='cucumber --format pretty'
 alias spec='/opt/local/bin/spec --options ~/spec.opts'
 alias stagger='git push origin development && cap staging deploy'
-# alias cg='cd ~/Sites/styleguides'
