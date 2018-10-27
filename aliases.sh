@@ -18,6 +18,7 @@ alias window='screencapture -iWc'
 #------------------------
 
 alias c='clear'
+alias os='uname -a'
 
 #------------------------
 # Disk & Files
