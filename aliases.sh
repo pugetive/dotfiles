@@ -36,7 +36,8 @@ alias rgrep='find . -type f -print0|xargs -0 grep -s'
 alias HEAD='curl -I'
 alias GET='curl '
 alias local-ip='ipconfig getifaddr en0'
-alias remote-ip='curl ifconfig.me'
+alias remote-ip='curl ipinfo.io/ip'
+alias ipinfo='curl ipinfo.io'
 alias eh='sudo subl /etc/hosts'
 
 #------------------------
