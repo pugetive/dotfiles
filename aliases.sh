@@ -44,6 +44,17 @@ alias eh='sudo subl /etc/hosts'
 #------------------------
 # Edit
 #------------------------
+e()
+{
+   if
+     (( $# )) # True if at least one argument present
+   then
+     command code $@
+   else
+     command code .
+   fi
+}
+
 alias mr='subl .'
 alias sdot='subl ~/code/dotfiles'
 alias s='subl'
