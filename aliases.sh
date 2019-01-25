@@ -44,6 +44,7 @@ alias eh='sudo subl /etc/hosts'
 #------------------------
 # Edit
 #------------------------
+alias subl="echo 'oops...please get addicted to e'"
 e()
 {
    if
@@ -54,11 +55,6 @@ e()
      command code .
    fi
 }
-
-alias mr='subl .'
-alias sdot='subl ~/code/dotfiles'
-alias s='subl'
-alias en='subl nomad.sublime-project'
 
 # alias C 'eval "if (\!* =~ *.c) then \\
 #    echo "C quitting: no .c on end of \!* please." \\
