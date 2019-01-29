@@ -47,16 +47,6 @@ alias eh='sudo subl /etc/hosts'
 alias mr='subl .'
 alias sdot='subl ~/code/dotfiles'
 alias s='subl'
-alias en='subl nomad.sublime-project'
-
-# alias C 'eval "if (\!* =~ *.c) then \\
-#    echo "C quitting: no .c on end of \!* please." \\
-# else \\
-#    if (-e \!*) mv \!* \!*.old \\
-#    echo \!*.c SENT TO cc \\
-#    cc -s \!*.c -o \!* \\
-#    if (-e \!*) chmod 311 \!* \\
-# endif"'
 
 #------------------------
 # Rails
