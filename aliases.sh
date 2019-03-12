@@ -39,7 +39,7 @@ alias GET='curl '
 alias local-ip='ipconfig getifaddr en0'
 alias remote-ip='curl ipinfo.io/ip'
 alias ipinfo='curl ipinfo.io'
-alias eh='sudo subl /etc/hosts'
+alias eh='sudo code /etc/hosts'
 
 #------------------------
 # Edit
