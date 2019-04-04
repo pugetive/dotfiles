@@ -111,6 +111,7 @@ alias csd='cap staging deploy'
 
 alias dev='git checkout development'
 alias mas='git checkout master'
+alias stag='git checkout staging'
 
 alias launch='mas && git merge development && git push origin master && cap production deploy && dev'
 
