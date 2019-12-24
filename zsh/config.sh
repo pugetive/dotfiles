@@ -30,14 +30,23 @@ CASE_SENSITIVE="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(cap gem git bundler)
+
+#plugins=(cap gem git bundler)
+# cap plugin was missing when moving to 2019 macbook
+plugins=(gem git bundler)
 
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
 
+# Preferred editor for local and remote sessions
+if [[ -n $SSH_CONNECTION ]]; then
+  export EDITOR='nano'
+else
+  export EDITOR='code'
+fi
+
+
 export PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:./bin:$HOME/bin
 export PATH="/usr/local/git/bin:$PATH"
 
-export EDITOR="emacs"
-export VISUAL="emacs"
