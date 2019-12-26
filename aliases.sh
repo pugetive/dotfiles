@@ -11,7 +11,7 @@ alias timestamp='date +%Y-%m-%d-%H%M%S'
 alias flush='dscacheutil -flushcache'
 alias window='screencapture -iWc'
 # Doc spacer
-# defaults write com.apple.dock persistent-apps -array-add '{"tile-type"="spacer-tile";}'; killall Dock
+alias spacer='defaults write com.apple.dock persistent-apps -array-add '"'"'{"tile-type"="spacer-tile";}'"'"'; killall Dock'
 
 #------------------------
 # Terminal
