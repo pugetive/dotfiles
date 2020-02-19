@@ -12,6 +12,7 @@ alias flush='sudo killall -HUP mDNSResponder;sudo killall mDNSResponderHelper;su
 alias window='screencapture -iWc'
 # Doc spacer
 alias spacer='defaults write com.apple.dock persistent-apps -array-add '"'"'{"tile-type"="spacer-tile";}'"'"'; killall Dock'
+alias edit='open -fe'
 
 #------------------------
 # Terminal
