@@ -88,6 +88,7 @@ alias cf='cd ~/code/fair.org'
 #------------------------
 alias t='bundle exec rspec'
 alias ht='HEADLESS=true rspec -r turnip/rspec ./spec/features/'
+alias htf='HEADLESS=true rspec -r turnip/rspec ./spec/features/ --fail-fast'
 
 #------------------------
 # Git
