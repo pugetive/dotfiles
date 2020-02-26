@@ -20,6 +20,7 @@ alias edit='open -fe'
 
 alias c='clear'
 alias os='uname -a'
+alias key='ssh-add -K ~/.ssh/id_rsa'
 
 #------------------------
 # Disk & Files
