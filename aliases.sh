@@ -69,6 +69,13 @@ alias cache='touch tmp/caching-dev.txt'
 alias uncache='rm tmp/caching-dev.txt'
 alias dj='bundle exec rake jobs:work'
 
+
+#------------------------
+# React Native
+#------------------------
+
+alias i8='react-native run-ios --simulator="iPhone 8"'
+
 #------------------------
 # Directories
 #------------------------
@@ -78,6 +85,7 @@ alias cc='cd ~/code'
 alias cg='cd ~/code/gems'
 alias ch='cd ~/code/hopville'
 alias ct='cd ~/code/pugetive.com'
+alias cn='cd ~/code/Narc'
 
 # FAIR
 alias cf='cd ~/code/fair.org'
@@ -90,6 +98,7 @@ alias cf='cd ~/code/fair.org'
 alias t='bundle exec rspec'
 alias ht='HEADLESS=true rspec -r turnip/rspec ./spec/features/'
 alias htf='HEADLESS=true rspec -r turnip/rspec ./spec/features/ --fail-fast'
+alias mt='rake test'
 
 #------------------------
 # Git
