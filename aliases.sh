@@ -84,7 +84,7 @@ alias i8='react-native run-ios --simulator="iPhone 8"'
 alias cc='cd ~/code'
 alias cg='cd ~/code/gems'
 # alias ch='cd ~/code/hopville'
-alias ct='cd ~/code/toddgehman.com'
+alias ct='cd ~/code/todd/toddgehman.com'
 # alias cn='cd ~/code/Narc'
 alias ca='cd ~/code/todd-api'
 
