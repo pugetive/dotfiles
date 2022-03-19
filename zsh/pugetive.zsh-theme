@@ -17,9 +17,20 @@ theme_precmd () {
     vcs_info
 }
 
+function ruby_version()
+{
+    if which rvm-prompt &> /dev/null; then
+      rvm-prompt i v g
+    else
+      if which rbenv &> /dev/null; then
+        rbenv version | sed -e "s/ (set.*$//"
+      fi
+    fi
+}
+
 setopt prompt_subst
 PROMPT='
-%b$FG[250]%n%b$FG[012]@%m %b$FG[081]%-3~ %B$FG[081]%c%b%F{magenta}${vcs_info_msg_0_}
+%b$FG[250]%n%b$FG[012] %b$FG[081]%-3~ %B$FG[081]%c%b %F{blue}$(ruby_version)%F{green}${vcs_info_msg_0_}
 %B ♫  %b$FG[189]'
 
 #☼
