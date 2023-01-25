@@ -64,6 +64,7 @@ e()
 alias rs='bundle exec rails s'
 alias rc='bundle exec rails c'
 alias rg='bundle exec rails g'
+alias bd='./bin/dev'
 
 alias cache='touch tmp/caching-dev.txt'
 alias uncache='rm tmp/caching-dev.txt'
