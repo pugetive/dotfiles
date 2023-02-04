@@ -78,7 +78,7 @@ alias dj='bundle exec rake jobs:work'
 alias i8='react-native run-ios --simulator="iPhone 8"'
 
 #------------------------
-# Directories
+# Dev Directories
 #------------------------
 
 # Todd
@@ -89,8 +89,13 @@ alias ct='cd ~/code/todd/toddgehman.com'
 # alias cn='cd ~/code/Narc'
 alias ca='cd ~/code/todd-api'
 
+alias tsa='cd ~/code/todd/todd-suite-api'
+alias tsr='cd ~/code/todd/todd-suite-react'
+
+
 # FAIR
 alias cf='cd ~/code/fair.org'
+
 
 
 
