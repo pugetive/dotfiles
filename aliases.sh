@@ -102,7 +102,7 @@ alias cf='cd ~/code/fair.org'
 #------------------------
 # Testing
 #------------------------
-alias t='bundle exec rspec'
+alias t='bundle exec rspec --format documentation'
 alias ht='HEADLESS=true rspec -r turnip/rspec ./spec/features/'
 alias htf='HEADLESS=true rspec -r turnip/rspec ./spec/features/ --fail-fast'
 alias mt='rake test'
