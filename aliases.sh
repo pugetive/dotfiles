@@ -12,7 +12,6 @@ alias flush='sudo killall -HUP mDNSResponder;sudo killall mDNSResponderHelper;su
 alias window='screencapture -iWc'
 # Doc spacer
 alias spacer='defaults write com.apple.dock persistent-apps -array-add '"'"'{"tile-type"="spacer-tile";}'"'"'; killall Dock'
-alias edit='open -fe'
 
 #------------------------
 # Terminal
@@ -20,7 +19,7 @@ alias edit='open -fe'
 
 alias c='clear'
 alias os='uname -a'
-alias key='ssh-add -K ~/.ssh/id_rsa'
+alias key='ssh-add --apple-use-keychain ~/.ssh/id_rsa'
 
 #------------------------
 # Disk & Files
@@ -103,6 +102,7 @@ alias cf='cd ~/code/fair.org'
 # Testing
 #------------------------
 alias t='bundle exec rspec --format documentation'
+alias rt='npm run test'
 alias ht='HEADLESS=true rspec -r turnip/rspec ./spec/features/'
 alias htf='HEADLESS=true rspec -r turnip/rspec ./spec/features/ --fail-fast'
 alias mt='rake test'
@@ -128,7 +128,7 @@ alias stg='git push origin development && cap staging deploy'
 alias gpm='git push origin master'
 alias csd='cap staging deploy'
 
-alias dev='git checkout development'
+alias dev='git checkout dev'
 alias mas='git checkout master'
 alias stag='git checkout staging'
 
@@ -148,13 +148,13 @@ alias web-free='lsof -i tcp:3000 -Fp|tr -d p|xargs kill -9'
 #------------------------
 # Fat Fingering
 #------------------------
-alias emacs="echo 'type that again, subliminal man'"
 alias rgrpe='rgrep'
 alias mroe='more'
 
 #------------------------
 # Chopping Block
 #------------------------
-
-alias cuke='cucumber --format pretty'
-alias spec='/opt/local/bin/spec --options ~/spec.opts'
+# alias emacs="echo 'type that again, subliminal man'"
+# alias cuke='cucumber --format pretty'
+# alias spec='/opt/local/bin/spec --options ~/spec.opts'
+# alias edit='open -fe'
