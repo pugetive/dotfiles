@@ -65,10 +65,14 @@ alias rc='bundle exec rails c'
 alias rg='bundle exec rails g'
 alias bd='./bin/dev'
 
-alias cache='touch tmp/caching-dev.txt'
-alias uncache='rm tmp/caching-dev.txt'
+alias cache='rails dev:cache'
 alias dj='bundle exec rake jobs:work'
 
+#------------------------
+# React
+#------------------------
+alias rr="npm start --prefix client"
+alias tt="npm run test --prefix client"
 
 #------------------------
 # React Native
