@@ -73,6 +73,7 @@ alias dj='bundle exec rake jobs:work'
 #------------------------
 alias rr="npm start --prefix client"
 alias tt="npm run test --prefix client"
+alias ni="npm install --prefix client"
 
 #------------------------
 # React Native
