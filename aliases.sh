@@ -82,6 +82,12 @@ alias ni="npm install --prefix client"
 alias i8='react-native run-ios --simulator="iPhone 8"'
 
 #------------------------
+# Python / Django
+#------------------------
+alias python="python3"
+
+
+#------------------------
 # Dev Directories
 #------------------------
 
