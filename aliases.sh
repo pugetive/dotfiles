@@ -94,12 +94,8 @@ alias pip="pip3"
 
 # Todd
 alias cc='cd ~/code'
-alias cg='cd ~/code/gems'
-# alias ch='cd ~/code/hopville'
 alias ct='cd ~/code/todd/toddgehman.com'
-# alias cn='cd ~/code/Narc'
 alias ca='cd ~/code/todd-api'
-
 alias tsa='cd ~/code/todd/todd-suite-api'
 alias tsr='cd ~/code/todd/todd-suite-react'
 
@@ -107,6 +103,8 @@ alias tsr='cd ~/code/todd/todd-suite-react'
 # FAIR
 alias cf='cd ~/code/fair.org'
 
+# Grapevine
+alias cg='cd ~/code/grapevine'
 
 
 
@@ -170,3 +168,5 @@ alias mroe='more'
 # alias cuke='cucumber --format pretty'
 # alias spec='/opt/local/bin/spec --options ~/spec.opts'
 # alias edit='open -fe'
+# alias ch='cd ~/code/hopville'
+# alias cn='cd ~/code/Narc'
