@@ -40,12 +40,13 @@ alias GET='curl '
 alias local-ip='ipconfig getifaddr en0'
 alias remote-ip='curl ipinfo.io/ip'
 alias ipinfo='curl ipinfo.io'
-alias eh='sudo code /etc/hosts'
 
 #------------------------
 # Edit
 #------------------------
-alias subl="echo 'oops...please get addicted to e'"
+alias eh='sudo code /etc/hosts'
+alias ed='code ~/code/dotfiles'
+
 e()
 {
    if
@@ -84,8 +85,8 @@ alias i8='react-native run-ios --simulator="iPhone 8"'
 #------------------------
 # Python / Django
 #------------------------
-alias python="python3"
-alias pip="pip3"
+# alias python="python3.8"
+# alias pip="pip3.8"
 
 
 #------------------------
@@ -170,3 +171,4 @@ alias mroe='more'
 # alias edit='open -fe'
 # alias ch='cd ~/code/hopville'
 # alias cn='cd ~/code/Narc'
+# alias subl="echo 'oops...please get addicted to e'"
