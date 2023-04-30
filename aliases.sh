@@ -13,6 +13,8 @@ alias window='screencapture -iWc'
 # Doc spacer
 alias spacer='defaults write com.apple.dock persistent-apps -array-add '"'"'{"tile-type"="spacer-tile";}'"'"'; killall Dock'
 
+alias brew='sudo -Hu homebrew brew'
+
 #------------------------
 # Terminal
 #------------------------
@@ -86,8 +88,8 @@ alias i8='react-native run-ios --simulator="iPhone 8"'
 #------------------------
 # Python / Django
 #------------------------
-alias python="python3.8"
-alias pip="pip3.8"
+# alias python="python3.8"
+# alias pip="pip3.8"
 
 
 #------------------------
@@ -106,8 +108,8 @@ alias cf='cd ~/code/fair.org'
 
 # Grapevine
 # alias cg='cd ~/code/grapevine'
-alias cs='cd ~/code/amp-server'
-alias gc='cd ~/code/amp-client'
+alias gvs='cd ~/code/amp-server'
+alias gvc='cd ~/code/amp-client'
 
 
 #------------------------
