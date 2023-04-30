@@ -46,6 +46,7 @@ alias ipinfo='curl ipinfo.io'
 #------------------------
 alias eh='sudo code /etc/hosts'
 alias ed='code ~/code/dotfiles'
+alias ez='code ~/.zshrc'
 
 e()
 {
@@ -100,13 +101,13 @@ alias ca='cd ~/code/todd-api'
 alias tsa='cd ~/code/todd/todd-suite-api'
 alias tsr='cd ~/code/todd/todd-suite-react'
 
-
 # FAIR
 alias cf='cd ~/code/fair.org'
 
 # Grapevine
-alias cg='cd ~/code/grapevine'
-
+# alias cg='cd ~/code/grapevine'
+alias cs='cd ~/code/amp-server'
+alias gc='cd ~/code/amp-client'
 
 
 #------------------------
@@ -124,7 +125,7 @@ alias mt='rake test'
 alias ga='git add'
 alias gap='git add -p'
 alias gb='git branch'
-alias gc='git checkout'
+# alias gc='git checkout' #used for work instead
 alias gm='git merge'
 alias gcn='git clean -n'
 alias gcf='git clean -f'
