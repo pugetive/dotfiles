@@ -49,6 +49,7 @@ alias ipinfo='curl ipinfo.io'
 alias eh='sudo code /etc/hosts'
 alias ed='code ~/code/dotfiles'
 alias ez='code ~/.zshrc'
+alias dot='source ~/.zshrc'
 
 e()
 {
