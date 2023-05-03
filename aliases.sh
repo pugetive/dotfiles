@@ -13,7 +13,7 @@ alias window='screencapture -iWc'
 # Doc spacer
 alias spacer='defaults write com.apple.dock persistent-apps -array-add '"'"'{"tile-type"="spacer-tile";}'"'"'; killall Dock'
 
-alias brew='sudo -Hu homebrew brew'
+# alias brew='sudo -Hu homebrew brew'
 
 #------------------------
 # Terminal
@@ -111,6 +111,8 @@ alias cf='cd ~/code/fair.org'
 alias gvs='cd ~/code/amp-server'
 alias gvc='cd ~/code/amp-client'
 
+alias ws='pipenv run ./manage.py runserver 5000'
+alias cs='npm run ng serve'
 
 #------------------------
 # Testing
