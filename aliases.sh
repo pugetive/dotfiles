@@ -89,6 +89,7 @@ alias i8='react-native run-ios --simulator="iPhone 8"'
 #------------------------
 # Python / Django
 #------------------------
+alias python='/Users/grapevine/.pyenv/shims/python'
 # alias python="python3.8"
 # alias pip="pip3.8"
 
