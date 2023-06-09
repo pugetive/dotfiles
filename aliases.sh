@@ -116,6 +116,7 @@ alias gvc='cd ~/code/amp-client'
 alias ws='pipenv run ./manage.py runserver 5000'
 alias cs='npm run ng serve'
 
+alias migrat='pipenv run ./manage.py makemigrations'
 alias migrate='pipenv run ./manage.py migrate'
 #------------------------
 # Testing
