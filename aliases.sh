@@ -118,6 +118,8 @@ alias cs='npm run ng serve'
 
 alias migrat='pipenv run ./manage.py makemigrations'
 alias migrate='pipenv run ./manage.py migrate'
+
+alias db='psql grapevine_staging'
 #------------------------
 # Testing
 #------------------------
