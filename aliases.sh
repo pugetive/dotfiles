@@ -120,6 +120,8 @@ alias migrat='pipenv run ./manage.py makemigrations'
 alias migrate='pipenv run ./manage.py migrate'
 
 alias db='psql grapevine_staging'
+alias restore='pg_restore --verbose --clean --no-acl --no-owner -h localhost -U root -d grapevine_staging'
+
 #------------------------
 # Testing
 #------------------------
