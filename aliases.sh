@@ -87,14 +87,6 @@ alias ni="npm install --prefix client"
 alias i8='react-native run-ios --simulator="iPhone 8"'
 
 #------------------------
-# Python / Django
-#------------------------
-alias python='/Users/grapevine/.pyenv/shims/python'
-# alias python="python3.8"
-# alias pip="pip3.8"
-
-
-#------------------------
 # Dev Directories
 #------------------------
 
@@ -107,20 +99,6 @@ alias tsr='cd ~/code/todd/todd-suite-react'
 
 # FAIR
 alias cf='cd ~/code/fair.org'
-
-# Grapevine
-# alias cg='cd ~/code/grapevine'
-alias gvs='cd ~/code/amp-server'
-alias gvc='cd ~/code/amp-client'
-
-alias ws='pipenv run ./manage.py runserver 5000'
-alias cs='npm run ng serve'
-
-alias migrat='pipenv run ./manage.py makemigrations'
-alias migrate='pipenv run ./manage.py migrate'
-
-alias db='psql grapevine_staging'
-alias restore='pg_restore --verbose --clean --no-acl --no-owner -h localhost -U root -d grapevine_staging'
 
 #------------------------
 # Testing
